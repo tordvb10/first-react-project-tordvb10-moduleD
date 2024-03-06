@@ -1,20 +1,23 @@
+import React from 'react'
+import { ReactDOM } from 'react'
 import './App.css'
-
+import content from "../verses"
+//import scripturesFetch from './scripturesFetch.js'
+console.log(content)
 
 function App() {
-  
-  const stuff = ["en","to","tre","fire"]  
-  const listItems = stuff.map(number => 
-    <li key={number}>{number}
+  const verse = content.verseId[Math.floor(Math.random()*content.verseId.length)]
+  const listItems = (
+    <li key={verse}>{verse}
     </li>
   )
+  console.log(verse)
   console.log(listItems)
 
   return (
-    <>  
-      
-      <ul>{listItems}</ul>
-    </>
+    <React.Fragment>  
+      <ul className='lister'>{listItems}</ul>
+    </React.Fragment>
   )
 }
 
