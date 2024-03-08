@@ -13,6 +13,7 @@ const option = {
     }
 }
 const errorArray = []
+
 const scripturesFetch = async (input = "") => {
     try{
         let path = url+input
